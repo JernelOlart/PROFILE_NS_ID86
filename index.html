@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Nucleo Sepec</title>
+    <title>Elián Hernández - IT Support Engineer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #0056b3;
-            --secondary: #002851;
+            --primary: #2A5C82;
+            --secondary: #1A3650;
             --accent: #FF6B00;
             --dark: #1a1a1a;
             --light: #ffffff;
@@ -23,7 +23,7 @@
         }
 
         body {
-            background: linear-gradient(rgba(0, 40, 81, 0.9), rgba(0, 40, 81, 0.9)),
+            background: linear-gradient(rgba(42, 92, 130, 0.9), rgba(42, 92, 130, 0.9)),
                         url('https://i.ibb.co/bRs0Mnht/FFSD.png') center/cover fixed;
             color: var(--light);
             min-height: 100vh;
@@ -36,97 +36,70 @@
             padding: 2rem;
         }
 
-        header {
+        .profile-header {
             text-align: center;
             padding: 4rem 0;
             position: relative;
-            overflow: hidden;
         }
 
-        header::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
+        .avatar {
             width: 200px;
-            height: 4px;
-            background: var(--accent);
-            border-radius: 2px;
-            animation: lineGrow 1s ease-out;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid var(--light);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s;
         }
 
-        @keyframes lineGrow {
-            0% { width: 0; }
-            100% { width: 200px; }
+        .avatar:hover {
+            transform: rotate(5deg) scale(1.05);
         }
 
-        .logo {
-            width: 280px;
-            filter: drop-shadow(0 0 15px rgba(255, 107, 0, 0.4));
-            animation: logoFloat 3s ease-in-out infinite;
+        .profile-info {
+            margin: 1.5rem 0;
         }
 
-        @keyframes logoFloat {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
+        .name {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
         }
 
-        .contact-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin: 4rem 0;
+        .position {
+            color: var(--accent);
+            font-size: 1.4rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .department {
+            color: #cccccc;
+            font-size: 1.1rem;
         }
 
         .contact-card {
+            max-width: 600px;
+            margin: 2rem auto;
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             border-radius: 20px;
             padding: 2rem;
             border: 2px solid rgba(255, 255, 255, 0.15);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
-            overflow: hidden;
+            transition: all 0.3s;
         }
 
         .contact-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .contact-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            transform: rotate(45deg);
-            animation: cardGlow 6s linear infinite;
-        }
-
-        @keyframes cardGlow {
-            0% { transform: rotate(45deg) translate(-50%, -50%); }
-            100% { transform: rotate(45deg) translate(50%, 50%); }
-        }
-
-        .contact-card h2 {
-            color: var(--accent);
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            z-index: 1;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            margin-bottom: 1.5rem;
-            padding: 1rem;
+            margin: 1.5rem 0;
+            padding: 1.2rem;
             background: rgba(0, 0, 0, 0.2);
-            border-radius: 12px;
+            border-radius: 15px;
             transition: transform 0.3s;
         }
 
@@ -142,22 +115,21 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 1rem;
+            margin-right: 1.5rem;
             font-size: 1.5rem;
             box-shadow: 0 5px 15px rgba(255, 107, 0, 0.3);
         }
 
         .btn {
-            padding: 12px 25px;
+            padding: 12px 30px;
             border-radius: 30px;
             display: inline-flex;
             align-items: center;
             font-weight: 600;
             transition: all 0.3s;
+            text-decoration: none;
             position: relative;
             overflow: hidden;
-            border: none;
-            cursor: pointer;
         }
 
         .btn::before {
@@ -185,76 +157,11 @@
             color: var(--light);
         }
 
-        .social-section {
-            margin: 4rem 0;
-            text-align: center;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .social-link {
-            width: 60px;
-            height: 60px;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .social-link::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.1);
-            transform: scale(0);
-            transition: 0.3s;
-            border-radius: 15px;
-        }
-
-        .social-link:hover::after {
-            transform: scale(1);
-        }
-
-        .social-link:hover {
-            transform: rotate(10deg) scale(1.1);
-        }
-
         footer {
             text-align: center;
             padding: 2rem;
-            border-top: 2px solid var(--accent);
             margin-top: 4rem;
-        }
-
-        /* Animaciones avanzadas */
-        @keyframes particleMove {
-            0% { transform: translateY(0) rotate(0deg); }
-            100% { transform: translateY(-100vh) rotate(360deg); }
-        }
-
-        .particles {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .particle {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            animation: particleMove linear infinite;
+            border-top: 2px solid var(--accent);
         }
 
         @media (max-width: 768px) {
@@ -262,132 +169,79 @@
                 padding: 1rem;
             }
             
-            .contact-section {
-                grid-template-columns: 1fr;
+            .name {
+                font-size: 2rem;
             }
             
-            .logo {
-                width: 220px;
+            .position {
+                font-size: 1.2rem;
+            }
+            
+            .avatar {
+                width: 150px;
+                height: 150px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="particles"></div>
-    
-    <header>
-        <div class="container">
-            <img src="https://i.ibb.co/gLw9z56p/20aniv.png" alt="Nucleo Sepec" class="logo">
-            <h1 style="margin: 1.5rem 0; font-size: 2.5rem;">Contáctanos</h1>
-            <p style="font-size: 1.1rem; opacity: 0.9;">Tu éxito es nuestra prioridad</p>
-        </div>
-    </header>
-
     <div class="container">
-        <div class="contact-section">
-            <div class="contact-card">
-                <h2><i class="fas fa-map-marker-alt"></i> TI Poza Rica</h2>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fab fa-whatsapp"></i>
-                    </div>
-                    <div>
-                        <p style="font-weight: 600;">WhatsApp</p>
-                        <a href="https://wa.me/5217821035865" class="btn whatsapp-btn">
-                            <i class="fab fa-whatsapp"></i> Enviar mensaje
-                        </a>
-                    </div>
+        <header class="profile-header">
+            <img src="URL_DE_TU_AVATAR" alt="Elián Hernández" class="avatar">
+            <div class="profile-info">
+                <h1 class="name">Elián Hernández Olarte</h1>
+                <p class="position">IT Support Engineer</p>
+                <p class="department">Departamento de TI</p>
+            </div>
+        </header>
+
+        <div class="contact-card">
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fab fa-whatsapp"></i>
                 </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div>
-                        <p style="font-weight: 600;">Correo electrónico</p>
-                        <a href="mailto:soportepr@nucleosepec.com.mx" class="btn email-btn">
-                            <i class="fas fa-envelope"></i> Enviar correo
-                        </a>
-                    </div>
+                <div>
+                    <h3>Contacto por WhatsApp</h3>
+                    <a href="https://wa.me/TU_NUMERO" class="btn whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> Enviar mensaje
+                    </a>
                 </div>
             </div>
 
-            <div class="contact-card">
-                <h2><i class="fas fa-map-marker-alt"></i> TI Villahermosa</h2>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fab fa-whatsapp"></i>
-                    </div>
-                    <div>
-                        <p style="font-weight: 600;">WhatsApp</p>
-                        <a href="https://wa.me/5217821035865" class="btn whatsapp-btn">
-                            <i class="fab fa-whatsapp"></i> Enviar mensaje
-                        </a>
-                    </div>
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
                 </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div>
-                        <p style="font-weight: 600;">Correo electrónico</p>
-                        <a href="mailto:soportevh@nucleosepec.com.mx" class="btn email-btn">
-                            <i class="fas fa-envelope"></i> Enviar correo
-                        </a>
-                    </div>
+                <div>
+                    <h3>Correo Electrónico</h3>
+                    <a href="mailto:TU_CORREO" class="btn email-btn">
+                        <i class="fas fa-envelope"></i> Enviar correo
+                    </a>
                 </div>
             </div>
         </div>
 
-        <div class="social-section">
-            <h2 style="margin-bottom: 2rem; font-size: 2rem;">Síguenos</h2>
-            <div class="social-links">
-                <a href="https://www.nucleosepec.com.mx/" class="social-link" style="background: var(--primary);">
-                    <i class="fas fa-globe"></i>
-                </a>
-                <a href="https://www.facebook.com/nucleosepec" class="social-link" style="background: #3b5998;">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://www.instagram.com/nucleo_sepec" class="social-link" style="background: #e1306c;">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com/company/nucleosepec" class="social-link" style="background: #0077b5;">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://x.com/Nucleo_Sepec" class="social-link" style="background: #1da1f2;">
-                    <i class="fab fa-twitter"></i>
-                </a>
-            </div>
-        </div>
+        <footer>
+            <p>&copy; 2023 Elián Hernández Olarte. Todos los derechos reservados.</p>
+        </footer>
     </div>
 
-    <footer>
-        <p>&copy; 2023 Nucleo Sepec. Todos los derechos reservados.</p>
-    </footer>
-
     <script>
-        // Generador de partículas dinámicas
-        function createParticles() {
-            const particles = document.querySelector('.particles');
-            for (let i = 0; i < 50; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = `${Math.random() * 100}%`;
-                particle.style.width = particle.style.height = `${Math.random() * 4 + 2}px`;
-                particle.style.animationDuration = `${Math.random() * 5 + 5}s`;
-                particle.style.animationDelay = `${Math.random() * 5}s`;
-                particles.appendChild(particle);
-            }
-        }
-        createParticles();
-
-        // Efecto de scroll suave
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+        // Efecto de hover suave para los elementos
+        document.querySelectorAll('.contact-item').forEach(item => {
+            item.addEventListener('mouseover', () => {
+                item.style.transform = 'translateX(10px)';
             });
+            
+            item.addEventListener('mouseout', () => {
+                item.style.transform = 'translateX(0)';
+            });
+        });
+
+        // Animación del avatar al cargar
+        window.addEventListener('load', () => {
+            const avatar = document.querySelector('.avatar');
+            avatar.style.transform = 'scale(1)';
         });
     </script>
 </body>
