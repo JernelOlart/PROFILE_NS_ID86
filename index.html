@@ -3,24 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elian Hernandez | Full Stack Developer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Elian Hernandez | Portfolio Profesional</title>
+    <meta name="description" content="Desarrollador Full Stack y Especialista en IA con 5+ años de experiencia creando soluciones tecnológicas innovadoras">
+    
+    <!-- Preconexiones y Preloads -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="js/script.js" as="script">
+    
+    <!-- Fuentes -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
 </head>
 <body>
-    <div class="particles" id="particles-js"></div>
+    <!-- Fondo de Partículas -->
+    <div id="particles-js"></div>
     
+    <!-- Encabezado -->
     <header class="parallax-bg">
         <div class="container">
             <div class="profile-header">
-                <img src="assets/logo.png" alt="Logo EH" class="logo">
+                <!-- Logo profesional -->
+                <img src="assets/logo.png" alt="Logo Elian Hernandez" class="logo" width="220" height="60">
+                
+                <!-- Avatar con indicador de estado -->
                 <div class="avatar-container">
-                    <img src="assets/avatar.jpg" alt="Elian Hernandez" class="avatar pulse">
+                    <img src="assets/avatar.jpg" alt="Elian Hernandez" class="avatar pulse" width="180" height="180">
                     <div class="status-dot"></div>
                 </div>
+                
+                <!-- Título principal -->
                 <h1 class="text-gradient">Elian Hernandez Olarte</h1>
-                <p class="typewriter">Senior Full Stack Developer | AI Specialist</p>
+                <p class="typewriter">Desarrollador Full Stack | Especialista en IA</p>
+                
+                <!-- Indicador de scroll -->
                 <div class="scroll-indicator">
                     <span></span>
                 </div>
@@ -28,28 +56,199 @@
         </div>
     </header>
 
+    <!-- Contenido Principal -->
     <main>
-        <section class="contact-section">
+        <!-- Sección de Contacto -->
+        <section id="contacto" class="contact-section">
             <div class="container">
                 <div class="holographic-card">
                     <h2><i class="fas fa-id-card"></i> Contacto Profesional</h2>
                     <div class="contact-grid">
-                        <!-- Contenido de contacto -->
+                        <!-- WhatsApp -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-text">
+                                <p>WhatsApp/Telegram</p>
+                                <a href="https://wa.me/519934613338" class="btn btn-whatsapp">
+                                    <i class="fab fa-whatsapp"></i> +51 993 461 338
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Email -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <p>Correo Electrónico</p>
+                                <a href="mailto:contacto@elianhernandez.com" class="btn btn-email">
+                                    <i class="fas fa-envelope"></i> Enviar Mensaje
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Ubicación -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <p>Ubicación</p>
+                                <a href="https://goo.gl/maps/..." class="btn btn-location" target="_blank">
+                                    <i class="fas fa-map-marker-alt"></i> Lima, Perú
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Calendly -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="contact-text">
+                                <p>Reunión Virtual</p>
+                                <a href="https://calendly.com/elianhernandez" class="btn btn-calendly" target="_blank">
+                                    <i class="fas fa-calendar-check"></i> Agendar Reunión
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="skills-section">
-            <!-- Sección de habilidades -->
+        <!-- Sección de Habilidades -->
+        <section id="habilidades" class="skills-section">
+            <div class="container">
+                <h2 class="section-title"><span>Habilidades Técnicas</span></h2>
+                
+                <div class="skills-grid">
+                    <!-- Habilidad 1 -->
+                    <div class="skill-card" data-aos="fade-up">
+                        <div class="skill-icon">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <h3>JavaScript</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="95%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Habilidad 2 -->
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="skill-icon">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <h3>React</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="90%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Habilidad 3 -->
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="skill-icon">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <h3>Node.js</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="85%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Habilidad 4 -->
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="skill-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Bases de Datos</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="88%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Redes Sociales -->
+        <section id="redes" class="social-section">
+            <div class="container">
+                <h2 class="section-title"><span>Conectemos</span></h2>
+                
+                <div class="social-links">
+                    <!-- Facebook -->
+                    <a href="https://facebook.com/tuperfil" class="social-link social-facebook" target="_blank" rel="noopener noreferrer">
+                        <div class="social-icon">
+                            <img src="assets/facebook-icon.svg" alt="Facebook" width="30" height="30">
+                        </div>
+                        <span>Facebook</span>
+                    </a>
+                    
+                    <!-- Twitter -->
+                    <a href="https://twitter.com/tuperfil" class="social-link social-twitter" target="_blank" rel="noopener noreferrer">
+                        <div class="social-icon">
+                            <img src="assets/twitter-icon.svg" alt="Twitter" width="30" height="30">
+                        </div>
+                        <span>Twitter</span>
+                    </a>
+                    
+                    <!-- LinkedIn -->
+                    <a href="https://linkedin.com/in/tuperfil" class="social-link social-linkedin" target="_blank" rel="noopener noreferrer">
+                        <div class="social-icon">
+                            <img src="assets/linkedin-icon.svg" alt="LinkedIn" width="30" height="30">
+                        </div>
+                        <span>LinkedIn</span>
+                    </a>
+                    
+                    <!-- GitHub -->
+                    <a href="https://github.com/JernelOlart" class="social-link social-github" target="_blank" rel="noopener noreferrer">
+                        <div class="social-icon">
+                            <img src="assets/github-icon.svg" alt="GitHub" width="30" height="30">
+                        </div>
+                        <span>GitHub</span>
+                    </a>
+                    
+                    <!-- Portfolio -->
+                    <a href="https://elianhernandez.com" class="social-link social-portfolio" target="_blank" rel="noopener noreferrer">
+                        <div class="social-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <span>Portfolio</span>
+                    </a>
+                </div>
+            </div>
         </section>
     </main>
 
+    <!-- Pie de Página -->
     <footer class="glass-footer">
-        <!-- Pie de página -->
+        <div class="container">
+            <div class="footer-links">
+                <a href="#contacto">Contacto</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#redes">Redes Sociales</a>
+                <a href="blog.html">Blog</a>
+                <a href="privacidad.html">Privacidad</a>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <span id="year"></span> Elian Hernandez Olarte. Todos los derechos reservados.</p>
+                <p class="signature">Desarrollado con <i class="fas fa-heart"></i> y código limpio</p>
+            </div>
+        </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="js/script.js"></script>
+    
+    <!-- Script de año actual -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
