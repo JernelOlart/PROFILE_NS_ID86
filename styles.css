@@ -581,3 +581,30 @@ footer p {
         font-size: 24px;
     }
 }
+/* Logo limpio */
+.pure-logo {
+    max-width: 220px;
+    height: auto;
+    filter: drop-shadow(0 5px 15px rgba(0,86,179,0.3));
+    transition: all 0.3s ease;
+}
+
+/* Iconos de redes sociales profesionales */
+.social-link img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: grayscale(30%);
+}
+
+.social-link:hover img {
+    transform: scale(1.15) translateY(-5px);
+    filter: grayscale(0%) drop-shadow(0 5px 10px rgba(0,0,0,0.2));
+}
+
+/* Estilos específicos para cada red */
+.social-link.fb:hover img { filter: drop-shadow(0 5px 10px #1877f266); }
+.social-link.tw:hover img { filter: drop-shadow(0 5px 10px #1da1f266); }
+.social-link.in:hover img { filter: drop-shadow(0 5px 10px #0077b566); }
+.social-link.gh:hover img { filter: drop-shadow(0 5px 10px #33333366); }
