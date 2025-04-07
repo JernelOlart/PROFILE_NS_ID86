@@ -3,116 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elian Hernandez Olarte - Perfil Personal</title>
+    <title>Elian Hernandez | Portfolio Profesional</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <div class="particles" id="particles-js"></div>
+    
+    <header class="parallax">
         <div class="container">
-            <img src="https://i.ibb.co/gLw9z56p/20aniv.png" alt="Foto de perfil" class="logo floating">
-            <h1>Elian Hernandez Olarte</h1>
-            <p>Desarrollador Web | Ingeniero en Sistemas</p>
+            <div class="profile-header">
+                <img src="assets/logo.png" alt="Logo" class="logo floating">
+                <div class="avatar-container">
+                    <img src="assets/avatar.jpg" alt="Elian Hernandez" class="avatar pulse">
+                    <div class="status-dot"></div>
+                </div>
+                <h1 class="text-gradient">Elian Hernandez Olarte</h1>
+                <p class="typewriter">Desarrollador Full Stack | Especialista en IA</p>
+            </div>
         </div>
     </header>
-    
+
     <div class="container">
         <div class="contact-section">
-            <div class="contact-card glow">
-                <h2><i class="fas fa-user"></i> Información de Contacto</h2>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-whatsapp"></i>
+            <!-- Tarjeta de contacto mejorada -->
+            <div class="contact-card holographic">
+                <div class="card-inner">
+                    <h2><i class="fas fa-id-card"></i> Contacto Profesional</h2>
+                    <div class="contact-grid">
+                        <div class="contact-item slide-in">
+                            <div class="contact-icon neon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-text">
+                                <p>WhatsApp</p>
+                                <a href="https://wa.me/519934613338" class="whatsapp-btn glow-on-hover">
+                                    <i class="fab fa-whatsapp"></i> 993 461 3338
+                                </a>
+                            </div>
                         </div>
-                        <div class="contact-text">
-                            <p>WhatsApp</p>
-                            <a href="https://wa.me/519934613338" class="whatsapp-btn">
-                                <i class="fab fa-whatsapp"></i> 9934613338
-                            </a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-text">
-                            <p>Correo electrónico</p>
-                            <a href="mailto:tuemail@example.com" class="email-btn">
-                                <i class="fas fa-envelope"></i> Contactar
-                            </a>
+                        <div class="contact-item slide-in">
+                            <div class="contact-icon neon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <p>Email Corporativo</p>
+                                <a href="mailto:contacto@elianhernandez.com" class="email-btn glow-on-hover">
+                                    <i class="fas fa-envelope"></i> Enviar Mensaje
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
+        <!-- Sección de habilidades -->
+        <div class="skills-section">
+            <h2 class="section-title"><span>Habilidades Técnicas</span></h2>
+            <div class="skills-grid">
+                <div class="skill-card" data-skill="95">
+                    <div class="skill-icon"><i class="fab fa-js"></i></div>
+                    <h3>JavaScript</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress"></div>
+                    </div>
+                </div>
+                <!-- Más habilidades... -->
+            </div>
+        </div>
+
+        <!-- Redes sociales con efecto 3D -->
         <div class="social-section">
-            <h2>Mis Redes Sociales</h2>
+            <h2 class="section-title"><span>Conectemos</span></h2>
             <div class="social-links">
-                <a href="https://facebook.com/tu_perfil" class="social-link facebook" target="_blank" title="Facebook">
+                <a href="#" class="social-link facebook tilt">
                     <i class="fab fa-facebook-f"></i>
+                    <span class="social-tooltip">Facebook</span>
                 </a>
-                <a href="https://twitter.com/tu_perfil" class="social-link twitter" target="_blank" title="X (Twitter)">
+                <a href="#" class="social-link twitter tilt">
                     <i class="fab fa-twitter"></i>
+                    <span class="social-tooltip">Twitter</span>
                 </a>
-                <a href="https://instagram.com/tu_perfil" class="social-link instagram" target="_blank" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://linkedin.com/in/tu_perfil" class="social-link linkedin" target="_blank" title="LinkedIn">
+                <a href="#" class="social-link linkedin tilt">
                     <i class="fab fa-linkedin-in"></i>
+                    <span class="social-tooltip">LinkedIn</span>
                 </a>
-                <a href="https://github.com/tu_perfil" class="social-link web" target="_blank" title="GitHub">
+                <a href="#" class="social-link github tilt">
                     <i class="fab fa-github"></i>
+                    <span class="social-tooltip">GitHub</span>
                 </a>
             </div>
         </div>
     </div>
-    
-    <footer>
+
+    <footer class="glass-footer">
         <div class="container">
-            <p>&copy; 2025 Elian Hernandez Olarte. Todos los derechos reservados.</p>
+            <p>&copy; 2023 Elian Hernandez Olarte. Todos los derechos reservados.</p>
+            <div class="signature">Desarrollado con <i class="fas fa-heart"></i> y JavaScript</div>
         </div>
     </footer>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate');
-                    }
-                });
-            }, {
-                threshold: 0.1
-            });
-            
-            document.querySelectorAll('.contact-card, .social-section').forEach(card => {
-                observer.observe(card);
-            });
-            
-            const buttons = document.querySelectorAll('.whatsapp-btn, .email-btn, .social-link');
-            buttons.forEach(button => {
-                button.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const x = e.clientX - e.target.getBoundingClientRect().left;
-                    const y = e.clientY - e.target.getBoundingClientRect().top;
-                    
-                    const ripple = document.createElement('span');
-                    ripple.classList.add('ripple');
-                    ripple.style.left = `${x}px`;
-                    ripple.style.top = `${y}px`;
-                    this.appendChild(ripple);
-                    
-                    setTimeout(() => {
-                        ripple.remove();
-                        window.location.href = this.href;
-                    }, 1000);
-                });
-            });
-        });
-    </script>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -6,6 +6,101 @@
     --dark: #343a40;
 }
 
+/* Efecto de partículas */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Avatar profesional */
+.avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid rgba(255,255,255,0.2);
+    box-shadow: 0 10px 30px rgba(0,86,179,0.5);
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+.avatar-container {
+    position: relative;
+    margin: 0 auto 20px;
+    width: fit-content;
+}
+
+.status-dot {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background: #25D366;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    animation: pulse 2s infinite;
+}
+
+/* Efecto holográfico */
+.holographic {
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.holographic::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to bottom right,
+        rgba(255,255,255,0),
+        rgba(255,255,255,0),
+        rgba(255,255,255,0.1),
+        rgba(255,255,255,0)
+    );
+    transform: rotate(30deg);
+    animation: shine 3s infinite;
+}
+
+/* Animaciones profesionales */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+@keyframes shine {
+    0% { left: -100%; }
+    20%, 100% { left: 100%; }
+}
+
+/* Efecto de máquina de escribir */
+.typewriter {
+    overflow: hidden;
+    border-right: 3px solid var(--accent);
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 2px;
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret 0.75s step-end infinite;
+}
+
 * {
     margin: 0;
     padding: 0;
