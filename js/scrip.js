@@ -266,3 +266,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (localStorage.getItem('darkMode') === 'enabled') {
     document.body.classList.add('dark-mode');
   }
+
+  .whatsapp-btn i {
+    margin-right: 8px; /* o la cantidad de espacio que quieras */
+}
