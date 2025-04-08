@@ -267,6 +267,3 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.classList.add('dark-mode');
   }
 
-  .whatsapp-btn i {
-    margin-right: 8px; /* o la cantidad de espacio que quieras */
-}
